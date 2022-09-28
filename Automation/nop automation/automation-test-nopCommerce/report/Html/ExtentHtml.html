@@ -1,0 +1,1752 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>HTML Extent</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent dark default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>GhChirp Report</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Sep 21, 2022 07:07:15 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    2</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='4%'>
+                    <span class='strong'>1</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='96%'>
+                    24</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='8%'>
+                    <span class='strong'>10</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='19%'>
+                    24</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='72%'>
+                    88</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Login page feature</span>
+						<span class='test-time'>Sep 21, 2022 07:07:16 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario outline node' test-id='2' status='fail'>
+
+	<span class='duration right label'>00 01 08.045</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User successfully login with valid username and password</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>email</td><td>password</td></tr><tr><td>admin@yourStore.com</td><td>invalidPassword</td></tr><tr><td>borhan@bs-23.net</td><td>12345678</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='3' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>User successfully login with valid username and password</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='6' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.pwc.glue.LoginSteps.customer_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given customer is on login page</h6>
+
+				</li>
+				<li test-id='7' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.pwc.glue.LoginSteps.verifyLoginPageTitleShouldBe(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Verify login page title should be "Your store. Login"</h6>
+
+				</li>
+				<li test-id='8' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.pwc.glue.LoginSteps.customerInputAndInLoginPage(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When customer input "admin@yourStore.com" and "invalidPassword" in login page</h6>
+
+				</li>
+				<li test-id='9' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.pwc.glue.LoginSteps.customerClickLoginButtonInLoginPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And customer click login button in login page</h6>
+
+				</li>
+				<li test-id='10' class='gc then Fail' status='Fail'>
+					<h6 class="step-name" title="com.pwc.glue.LoginSteps.verifyCustomerLoginSuccessfully()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Verify customer login successfully</h6>
+
+							<textarea disabled class="code-block">com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+    at ProgressController.run (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at com.microsoft.playwright.Page.click(Page.java:3370)
+	at com.pages.LoginPage.clickHomePageMyAccountMenu(LoginPage.java:50)
+	at com.pwc.glue.LoginSteps.verifyCustomerLoginSuccessfully(LoginSteps.java:42)
+	at ✽.Verify customer login successfully(classpath:com/pwc/features//LoginTest.feature:8)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+    at ProgressController.run (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at com.microsoft.playwright.Page.click(Page.java:3370)
+	at com.pages.LoginPage.clickHomePageMyAccountMenu(LoginPage.java:50)
+	at com.pwc.glue.LoginSteps.verifyCustomerLoginSuccessfully(LoginSteps.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.PickleDescriptor.execute(PickleDescriptor.java:100)
+	at io.cucumber.junit.platform.engine.PickleDescriptor.execute(PickleDescriptor.java:29)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:73)
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:150)
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+</textarea>
+				</li>
+				<li test-id='11' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.pwc.hooks.ApplicationHooks.takeFailedScreenshot(io.cucumber.java.Scenario)</h6>
+
+							<div class="node-step">User successfully login with valid username and password</div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshots/embedded1.png' src='../screenshots/embedded1.png'>
+							</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='13' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>User successfully login with valid username and password</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='16' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.pwc.glue.LoginSteps.customer_is_on_login_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given customer is on login page</h6>
+
+				</li>
+				<li test-id='17' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.pwc.glue.LoginSteps.verifyLoginPageTitleShouldBe(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Verify login page title should be "Your store. Login"</h6>
+
+				</li>
+				<li test-id='18' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.pwc.glue.LoginSteps.customerInputAndInLoginPage(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When customer input "borhan@bs-23.net" and "12345678" in login page</h6>
+
+				</li>
+				<li test-id='19' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.pwc.glue.LoginSteps.customerClickLoginButtonInLoginPage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And customer click login button in login page</h6>
+
+				</li>
+				<li test-id='20' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.pwc.glue.LoginSteps.verifyCustomerLoginSuccessfully()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Verify customer login successfully</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Public store product details page</span>
+						<span class='test-time'>Sep 21, 2022 07:08:24 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  A customer should see all the details of product from public store
+  Actor:
+  2. Customer</div>
+
+<div class='scenario node' test-id='24' status='fail'>
+
+	<span class='duration right label'>00 00 00.812</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see breadcrumb list in top of product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='27' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='28' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='29' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='30' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I should see breadcrumb list in product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='33' status='fail'>
+
+	<span class='duration right label'>00 00 00.724</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see product name from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='36' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='37' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='38' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='39' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see product name in product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='42' status='fail'>
+
+	<span class='duration right label'>00 00 00.830</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can navigate to product review page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='45' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='46' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='47' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='48' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I click on add your review button from product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='49' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I should see product review page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='52' status='fail'>
+
+	<span class='duration right label'>00 00 00.711</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can navigate to test product manufacturer page from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='55' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='56' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='57' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='58' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I click on manufacturer name link-text from product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='61' status='fail'>
+
+	<span class='duration right label'>00 00 00.923</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see product sku from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='64' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='65' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='66' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='67' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see product sku from product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='70' status='fail'>
+
+	<span class='duration right label'>00 00 00.755</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see product sku from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='73' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='74' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='75' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='76' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see product sku from product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='79' status='fail'>
+
+	<span class='duration right label'>00 00 00.727</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see product is free shipping</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='82' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='83' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='84' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='85' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see free shipping showing from product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='88' status='fail'>
+
+	<span class='duration right label'>00 00 00.764</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can select product color square checkbox from product details</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='91' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='92' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='93' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='94' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should able to select color square from product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='97' status='fail'>
+
+	<span class='duration right label'>00 00 00.862</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can select product screen size radio button list</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='100' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='101' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='102' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='103' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should able to select screen size radio button from product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='106' status='fail'>
+
+	<span class='duration right label'>00 00 00.796</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see product old price</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='109' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='110' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='111' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='112' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see old price showing from product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='115' status='fail'>
+
+	<span class='duration right label'>00 00 00.841</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see product price</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='118' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='119' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='120' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='121' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see price showing from product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='124' status='fail'>
+
+	<span class='duration right label'>00 00 00.769</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can add product in cart with add to cart button from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='127' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='128' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='129' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='130' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I click add to cart button on product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='131' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see success message "The product has been added to your shopping cart"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='132' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I check successfully product added in my cart page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='135' status='fail'>
+
+	<span class='duration right label'>00 00 00.832</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can add product in wishlist with add to wishlist button from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='138' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='139' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='140' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='141' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I click add to wishlist button on product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='142' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see success message "The product has been added to your wishlist"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='143' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I check successfully product added in my wishlist page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='146' status='fail'>
+
+	<span class='duration right label'>00 00 00.743</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can add product in compare list with add to compare list button from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='149' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='150' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='151' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='152' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I click add to compare list button on product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='153' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see success message "The product has been added to your product comparison"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='154' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I check successfully product added in my compare product page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='157' status='fail'>
+
+	<span class='duration right label'>00 00 00.796</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can email this product with email a friend button from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='160' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='161' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='162' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='163' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I click email a friend button on product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='164' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see product email page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='165' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I fill up all details of email form in email product page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='166' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I click send email button in email product page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='167' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I should see success message "Your message has been sent."</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='170' status='fail'>
+
+	<span class='duration right label'>00 00 00.841</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see product long description from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='173' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='174' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='175' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='176' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see product long description in product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='179' status='fail'>
+
+	<span class='duration right label'>00 00 00.777</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see product specification from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='182' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='183' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='184' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='185' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see product specification in product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='188' status='fail'>
+
+	<span class='duration right label'>00 00 00.829</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see product tags from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='191' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='192' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='193' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='194' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see product tags in product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='197' status='fail'>
+
+	<span class='duration right label'>00 00 00.765</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see related product list from product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='200' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='201' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='202' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='203' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see related product showing in product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='204' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I should see the expected related product showing in product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='207' status='fail'>
+
+	<span class='duration right label'>00 00 00.883</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can see related product details from related product box</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='210' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='211' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='212' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='213' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see related product name from related product box in product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='214' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see related product price from related product box in product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='217' status='fail'>
+
+	<span class='duration right label'>00 00 00.818</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can add product in cart with add to cart button from related product box of product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='220' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='221' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='222' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='223' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I click add to cart button on related product box of product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='224' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see success message "The product has been added to your shopping cart"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='225' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I check successfully product added in my cart page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='228' status='fail'>
+
+	<span class='duration right label'>00 00 00.836</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can add product in compare list with add to compare list button from related product box of product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='231' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='232' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='233' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='234' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I click add to compare list button on related product box of product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='235' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see success message "The product has been added to your shopping cart"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='236' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I check successfully product added in my cart page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='239' status='fail'>
+
+	<span class='duration right label'>00 00 00.855</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Customer can add product in wishlist with add to wishlist button from related product box of product details page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='242' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I am at public store</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='243' class='node when Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='244' class='node given Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Given I am at product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='245' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I click add to wishlist button on related product box of product details page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='246' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see success message "The product has been added to your shopping cart"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='247' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I check successfully product added in my cart page</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>com.microsoft.playwright.TimeoutError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 21, 2022 07:07:40 PM</td>
+										<td class='linked' test-id='10'>Then Verify customer login successfully</td>
+										<td>
+											<textarea disabled class="code-block">com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+    at ProgressController.run (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at com.microsoft.playwright.Page.click(Page.java:3370)
+	at com.pages.LoginPage.clickHomePageMyAccountMenu(LoginPage.java:50)
+	at com.pwc.glue.LoginSteps.verifyCustomerLoginSuccessfully(LoginSteps.java:42)
+	at ✽.Verify customer login successfully(classpath:com/pwc/features//LoginTest.feature:8)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+    at ProgressController.run (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at com.microsoft.playwright.Page.click(Page.java:3370)
+	at com.pages.LoginPage.clickHomePageMyAccountMenu(LoginPage.java:50)
+	at com.pwc.glue.LoginSteps.verifyCustomerLoginSuccessfully(LoginSteps.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.PickleDescriptor.execute(PickleDescriptor.java:100)
+	at io.cucumber.junit.platform.engine.PickleDescriptor.execute(PickleDescriptor.java:29)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:73)
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:150)
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>2</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>25</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>122</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 21, 2022 07:07:15 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 21, 2022 07:08:43 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 01 27.952</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>version</td>
+								<td>11</td>
+							</tr>
+							<tr>
+								<td>os</td>
+								<td>Windows</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 2,
+				passParent: 0,
+				failParent: 2,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 25,
+				passChild: 1,
+				failChild: 24,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 122,
+				passGrandChild: 10,
+				failGrandChild: 24,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 88,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Login page feature":68.048,"Public store product details page":18.99
+			};
+		</script>
+		
+		  <script src='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>

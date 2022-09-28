@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="24" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="25" time="87.338">
+<testcase classname="Login page feature" name="User successfully login with valid username and password" time="53.748">
+<failure message="Error {&#10;  message='Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for selector &quot;//a[@class='ico-account']&quot;&#10;============================================================&#10;  name='TimeoutError&#10;  stack='TimeoutError: Timeout 30000ms exceeded.&#10;=========================== logs ===========================&#10;waiting for selector &quot;//a[@class='ico-account']&quot;&#10;============================================================&#10;    at ProgressController.run (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\progress.js:96:26)&#10;    at Frame.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\frames.js:1197:23)&#10;    at FrameDispatcher.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\frameDispatcher.js:173:30)&#10;    at DispatcherConnection.dispatch (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\dispatcher.js:397:46)&#10;}" type="com.microsoft.playwright.TimeoutError"><![CDATA[Given customer is on login page.............................................passed
+And Verify login page title should be "Your store. Login"...................passed
+When customer input "admin@yourStore.com" and "invalidPassword" in login page.passed
+And customer click login button in login page...............................passed
+Then Verify customer login successfully.....................................failed
+
+StackTrace:
+com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+    at ProgressController.run (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at com.microsoft.playwright.Page.click(Page.java:3370)
+	at com.pages.LoginPage.clickHomePageMyAccountMenu(LoginPage.java:50)
+	at com.pwc.glue.LoginSteps.verifyCustomerLoginSuccessfully(LoginSteps.java:42)
+	at ✽.Verify customer login successfully(classpath:com/pwc/features//LoginTest.feature:8)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for selector "//a[@class='ico-account']"
+============================================================
+    at ProgressController.run (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\progress.js:96:26)
+    at Frame.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\frames.js:1197:23)
+    at FrameDispatcher.click (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\frameDispatcher.js:173:30)
+    at DispatcherConnection.dispatch (C:\Users\BS534\AppData\Local\Temp\playwright-java-15988756082169380657\package\lib\server\dispatchers\dispatcher.js:397:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:188)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:170)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:108)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:100)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:255)
+	at com.microsoft.playwright.impl.PageImpl.lambda$click$17(PageImpl.java:626)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:85)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:625)
+	at com.microsoft.playwright.Page.click(Page.java:3370)
+	at com.pages.LoginPage.clickHomePageMyAccountMenu(LoginPage.java:50)
+	at com.pwc.glue.LoginSteps.verifyCustomerLoginSuccessfully(LoginSteps.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.PickleDescriptor.execute(PickleDescriptor.java:100)
+	at io.cucumber.junit.platform.engine.PickleDescriptor.execute(PickleDescriptor.java:29)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:73)
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:150)
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+]]></failure>
+</testcase>
+<testcase classname="Login page feature" name="User successfully login with valid username and password 2" time="14.306">
+<system-out><![CDATA[Given customer is on login page.............................................passed
+And Verify login page title should be "Your store. Login"...................passed
+When customer input "borhan@bs-23.net" and "12345678" in login page.........passed
+And customer click login button in login page...............................passed
+Then Verify customer login successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see breadcrumb list in top of product details page" time="0.822">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+Then I should see breadcrumb list in product details page...................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see product name from product details page" time="0.761">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see product name in product details page.......................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can navigate to product review page" time="0.839">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+When I click on add your review button from product details page............skipped
+Then I should see product review page.......................................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can navigate to test product manufacturer page from product details page" time="0.71">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I click on manufacturer name link-text from product details page........skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see product sku from product details page" time="0.922">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see product sku from product details page......................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see product sku from product details page 2" time="0.759">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see product sku from product details page......................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see product is free shipping" time="0.728">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see free shipping showing from product details page............skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can select product color square checkbox from product details" time="0.769">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should able to select color square from product details page..........skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can select product screen size radio button list" time="0.864">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should able to select screen size radio button from product details page.skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see product old price" time="0.798">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see old price showing from product details page................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see product price" time="0.842">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see price showing from product details page....................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can add product in cart with add to cart button from product details page" time="0.769">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I click add to cart button on product details page......................skipped
+And I should see success message "The product has been added to your shopping cart".skipped
+Then I check successfully product added in my cart page.....................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can add product in wishlist with add to wishlist button from product details page" time="0.832">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I click add to wishlist button on product details page..................skipped
+And I should see success message "The product has been added to your wishlist".skipped
+Then I check successfully product added in my wishlist page.................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can add product in compare list with add to compare list button from product details page" time="0.744">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I click add to compare list button on product details page..............skipped
+And I should see success message "The product has been added to your product comparison".skipped
+Then I check successfully product added in my compare product page..........skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can email this product with email a friend button from product details page" time="0.796">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I click email a friend button on product details page...................skipped
+And I should see product email page.........................................skipped
+Then I fill up all details of email form in email product page..............skipped
+And I click send email button in email product page.........................skipped
+Then I should see success message "Your message has been sent.".............skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see product long description from product details page" time="0.841">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see product long description in product details page...........skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see product specification from product details page" time="0.778">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see product specification in product details page..............skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see product tags from product details page" time="0.828">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see product tags in product details page.......................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see related product list from product details page" time="0.765">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see related product showing in product details page............skipped
+Then I should see the expected related product showing in product details page.skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can see related product details from related product box" time="0.884">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I should see related product name from related product box in product details page.skipped
+And I should see related product price from related product box in product details page.skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can add product in cart with add to cart button from related product box of product details page" time="0.817">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I click add to cart button on related product box of product details page.skipped
+And I should see success message "The product has been added to your shopping cart".skipped
+Then I check successfully product added in my cart page.....................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can add product in compare list with add to compare list button from related product box of product details page" time="0.835">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I click add to compare list button on related product box of product details page.skipped
+And I should see success message "The product has been added to your shopping cart".skipped
+Then I check successfully product added in my cart page.....................skipped
+]]></failure>
+</testcase>
+<testcase classname="Public store product details page" name="Customer can add product in wishlist with add to wishlist button from related product box of product details page" time="0.855">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I am at public store..................................................undefined
+When I am logged in as a customer with valid username "customer@yourStore.com" password "customer112".skipped
+Given I am at product details page..........................................skipped
+And I click add to wishlist button on related product box of product details page.skipped
+And I should see success message "The product has been added to your shopping cart".skipped
+Then I check successfully product added in my cart page.....................skipped
+]]></failure>
+</testcase>
+</testsuite>
